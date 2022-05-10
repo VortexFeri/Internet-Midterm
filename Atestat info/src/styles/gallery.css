@@ -1,0 +1,50 @@
+#sect2 {
+    padding: 0;
+}
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+}
+.gal-sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+}
+.fig {
+    background: red 50% 20%;
+    border: 1px solid #aaa;
+    width: 300px;
+    height: 250px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+}
+.fig.mod {
+    background: blue;
+    height: 610px;
+    background-size: cover;
+    background-position: center;
+}
+
+#wide {
+    width: 600px;
+}
+
+@media (max-width: 1136px) {
+    .gal-sect:nth-child(3) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .fig, .fig.mod {
+        width: 250px;
+        height: 250px
+    }
+    #gallery {
+        width: calc(100vw - 15);
+        /* overflow-x: hidden; */
+        max-width: 500px;
+    }
+}

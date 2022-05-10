@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #05050a;
+    font-size: 16px;
+    color: #bbb
+}
+/* SECTION 1 - HEADER */
+
+header {
+    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0, .5)), url(../../images/pexels-juan.jpg);
+    background-size: cover;
+    background-position-y: 100%;
+    padding: 30px 40px;
+    color: #ccc;
+    font-weight: 500;
+    z-index: 2;
+}
+#atestat {
+    margin-bottom: 100px;
+    line-height: 1.8em;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+#atestat::before, #atestat::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 10px;
+    background: #ff8811;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+#atestat::before {
+    top: calc(1.8em + 9px);
+    left: 220px;
+    width: 20px;
+    transform: translateX(-200%) scaleX(0);
+}
+.title {
+    margin: 2.5em;
+    font-size: 2.1em;
+    font-weight: 500;
+}
+.title h1 {
+    margin-bottom: 50px;
+}
+.title h2 {
+    font-size: .5em;
+    margin-bottom: 5px;
+}
+
+
+/* SECTION 2 - CUPRINS */
+
+#sect2 {
+    padding: 50px 80px 0;
+    background: linear-gradient(to bottom, #000000, #0a0a0a, #05050a);
+}
+.sub-div {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    text-decoration: none;
+    color: #bbb;
+    font-size: 1.2em;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 60vw;
+    margin: 10px 0;
+    transition: .2s;
+}
+.sub-div:hover {
+    background: rgba(18, 18, 34, 0.315);
+    color: #ccc
+}
+.sub-div:hover .sub-img {
+    transform: scale(1.1);
+}
+#sub-div-2,
+#sub-div-4,
+#sub-div-6,
+#sub-div-8 {
+    position: relative;
+    margin-left: calc(40vw - 80px);
+    flex-direction: row;
+}
+.sub-text {
+    max-width: 50%;
+    margin: auto;
+}
+.sub-title {
+    padding: 20px 0;
+    color: #ffab25;
+}
+.sub-img {
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    transition: .2s;
+    background-size: contain !important;
+}
+
+#sub-div-1 .sub-img {background: url(../../images/pexels-pixabay-41162.jpg)}
+#sub-div-2 .sub-img {background: url(../../images/pexels-adi-kavazovic-3222255.jpg)}
+#sub-div-3 .sub-img {background: url(../../images/pexels-pixabay-73910.jpg)}
+#sub-div-4 .sub-img {background: url(../../images/pexels-avery-nielsenwebb-2406397.jpg)}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    #decor-planet {width: 30vw;}
+    header {padding: initial 0}
+    .title {margin: 2.5em auto}
+    #sect2 {padding: 50px 50px 0;}
+    .sub-div {
+        max-width: 85%;
+        margin: 30px auto !important;
+        border: 1px solid rgba(255,255,255, .05)
+    }
+    footer {text-align: center}
+}
+
+@media only screen and (max-width: 800px) {
+    header {padding: 10px;}
+    #decor-planet {display: none;}
+    body {font-size: 12px;}
+    .title {text-align: center}
+    .title h2 {font-size: .6em}
+    .sub-div {
+        margin: 30px auto !important;
+    }
+    .sub-text {
+        max-width: 95%;
+        text-align: center;
+        font-size: 1.1em;
+    }
+    footer {
+        font-size: 1.2em;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #atestat {display: none}
+    header { 
+        padding: 40px 0 !important;
+        text-align: center;
+    }
+    .title {
+        margin: inherit 0 !important
+    }
+    #sect2 { padding: 50px 0 0;}
+    .sub-div {
+        max-width: 100vw;
+        margin: 20px 0 !important;
+    }
+    .sub-img {width: 150px; height: 150px;}
+}
+
+
+
+
+
+[data-scroll] {
+    transition: opacity 1s, transform 2s ease-out;
+}
+[data-scroll="in"] {
+	opacity: 1;
+	transform: translateY(0);
+}
+[data-scroll="out"] {
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+#atestat::after {
+    animation: atestat_big_line 1s forwards .7s cubic-bezier(.59,.63,.58,1.17);
+}
+#atestat::before {
+    animation: atestat_small_line .5s forwards 1.7s cubic-bezier(.46,.32,.26,.92);
+}
+@keyframes atestat_small_line {
+    to {
+        transform: translateY(0) scaleX(1);
+    }
+}
+@keyframes atestat_big_line {
+    to {
+        transform: scaleX(1)
+    }
+}

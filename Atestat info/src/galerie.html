@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/other.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie de Imagini</title>
+</head>
+<body>
+
+    <nav>
+        <button id='nav-btn'>
+            <span id="nav-btn-line" aria-hidden="true"></span>
+        </button>
+        <div id="nav-bar">
+            <a href="prima-calatorie.html" class="nav-link">prima călătorie în spațiu</a>
+            <a href="stele.html" class="nav-link">stelele</a>
+            <a href="marte.html" class="nav-link">viitorul: colonizarea planetei marte</a>
+            <a href="galerie.html" class="nav-link">galerie imagini</a>
+        </div>
+        <a id="home-btn" href="index.html">
+            <img src="../images/home.svg" alt="Acasă" title="Acasă">
+        </a>
+    </nav>
+
+    <main id="pg-4">
+
+        <header>
+            <span id="atestat">Atestat la Informatică 2021</span>
+            <div class="title">
+                <h1>Galerie De <br><span>Imagini</span></h1>
+            </div>
+            <div id="scroll-down">
+                <a href="#sect2">Derulează în jos</a>
+                <div class="arrow"></div>
+            </div>
+        </header>
+    
+        <section id="sect2">
+
+            <div id="gallery">
+                <div class="gal-sect"></div>
+                <div class="gal-sect"></div>
+                <div class="gal-sect"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Fotografii preluate de pe <a href="https://www.pexels.com/ro-ro/">Pexels</a>
+    </footer>
+
+    <div id="nav-overlay" aria-hidden="true"></div>
+    <script src="app.js"></script>
+    <script src="gallery.js"></script>
+
+</body>
+</html>
